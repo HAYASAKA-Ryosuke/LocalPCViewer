@@ -1,0 +1,31 @@
+<html>
+<HEAD>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
+</HEAD>
+<SCRIPT language="JavaScript">
+<!--
+myCnt = 0;  // 残り時間を格納する変数
+myTim = 0;  // タイマーのハンドル
+function changeImage() {
+	var filename="img1.png?"+new Date().getTime();
+	try{
+	document.execCommand('BackgroundImageCache',false,true);
+	document.clear();
+	document.img.src = filename;
+	
+}catch(e){}
+setTimeout('changeImage()',300);
+}
+//function showimg1(){
+//	document.clear();
+//	var filename="img1.png?"+new Date().getTime();
+//	document.write('<img src='+filename+' border="0">');
+//}
+//-->
+</SCRIPT>
+<img src="img1.png" name="img"/></a>
+<BODY bgcolor="#ffffff" onLoad="setTimeout('changeImage()',300)">
+</body>
+</html>
