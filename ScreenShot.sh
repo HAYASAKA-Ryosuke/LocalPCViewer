@@ -1,1 +1,1 @@
-	screencapture -C -x ./img1.png
+screencapture -C -x ./img1.png

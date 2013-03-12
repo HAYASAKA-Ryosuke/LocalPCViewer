@@ -14,11 +14,11 @@ function changeImage() {
 		document.img.src = filename;
 	}catch(e){}
 
-	setTimeout('changeImage()',1000/5);
+	setTimeout('changeImage()',0);
 }
 //-->
 </SCRIPT>
 <img src="img1.png" name="img"/></a>
-<BODY bgcolor="#ffffff" onLoad="setTimeout('changeImage()',1000/5)">
+<BODY bgcolor="#ffffff" onLoad="setTimeout('changeImage()',0)">
 </body>
 </html>
