@@ -1,14 +1,13 @@
 import SimpleHTTPServer
-from multiprocessing import Pool
 import commands
 import threading
-import time
-def screencap:
-    commands.getoutput('sh ./ScreenShot.sh')
-    t=threading.Timer(0.5,screencap)
-    t.start()
 
-t=threading.Timer(0.5,screencap)
+def screencap():
+    commands.getoutput('sh ./ScreenShot.sh')
+    t=threading.Timer(0.1,screencap)
+    t.start()
+    
+t=threading.Timer(0.1,screencap)
 t.start()
 
 SimpleHTTPServer.test()

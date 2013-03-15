@@ -6,6 +6,12 @@
 </HEAD>
 <script type="text/javascript" >
 <!--
+document.onmousemove = function(e){
+	// スクリーン座標系を基点としたマウスカーソルの座標を取得
+	var mouse_x = e.screenX;
+	alert(mouse_x);
+}
+
 function changeImage() {
 	try{
 		var filename="img1.png?"+new Date().getTime();
@@ -13,9 +19,9 @@ function changeImage() {
 		document.clear();
 		document.img.src = filename;
 	}catch(e){}
-
-	setTimeout('changeImage()',0);
+	img.onload = function(){setTimeout('changeImage()',0);};
 }
+	
 //-->
 </SCRIPT>
 <img src="img1.png" name="img"/></a>
